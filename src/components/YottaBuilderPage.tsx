@@ -10,7 +10,7 @@ export default function YottaBuilderPage({ onWaitlistClick }: YottaBuilderPagePr
 
 
   return (
-    <div className="yottabuilder-product-page" style={{ color: 'var(--text-primary)', paddingBottom: '5rem' }}>
+    <div className="yottabuilder-product-page" style={{ color: 'var(--text-primary)' }}>
       
       {/* 1. HERO SECTION */}
       <section className="product-hero" style={{ paddingTop: '9rem', paddingBottom: '4rem', minHeight: '80vh', position: 'relative' }}>

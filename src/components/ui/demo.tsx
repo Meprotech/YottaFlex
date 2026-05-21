@@ -43,13 +43,13 @@ export default function FlowArtDefaultDemo() {
         </p>
         <hr className="my-4 border-none border-t border-white/10" />
         <div className="flex flex-wrap gap-[3vw]">
-          <div className="min-w-[200px] flex-1">
+          <div className="min-w-[200px] flex-1 flow-card">
             <p className="mb-2 text-sm font-bold uppercase tracking-wider text-[#00d2ff]">YottaBuilder.ai</p>
             <p className="text-[clamp(0.8rem,1.1vw,1rem)] leading-relaxed text-slate-400">
               An AI-powered development pipeline that converts raw requirements, RFPs, and design specs into complete, buildable code repos with 100% trace lineage.
             </p>
           </div>
-          <div className="min-w-[200px] flex-1">
+          <div className="min-w-[200px] flex-1 flow-card">
             <p className="mb-2 text-sm font-bold uppercase tracking-wider text-[#00d2ff]">SafeChief.com</p>
             <p className="text-[clamp(0.8rem,1.1vw,1rem)] leading-relaxed text-slate-400">
               A specialized compliance and vault management engine for safe deposit boxes (SDB), incorporating state-by-state escheatment and full chain-of-custody tracking.
@@ -78,19 +78,19 @@ export default function FlowArtDefaultDemo() {
         </p>
         <hr className="my-4 border-none border-t border-white/10" />
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-slate-400">
-          <div>
+          <div className="flow-card">
             <p className="text-[clamp(0.8rem,1vw,0.95rem)] font-semibold text-[#00d2ff]">&gt; ENERGY &amp; UTILITIES</p>
             <p className="text-xs mt-1">Predictive analytics &amp; field ops.</p>
           </div>
-          <div>
+          <div className="flow-card">
             <p className="text-[clamp(0.8rem,1vw,0.95rem)] font-semibold text-[#00d2ff]">&gt; BANKING &amp; FINANCE</p>
             <p className="text-xs mt-1">Automated compliance &amp; risk.</p>
           </div>
-          <div>
+          <div className="flow-card">
             <p className="text-[clamp(0.8rem,1vw,0.95rem)] font-semibold text-[#00d2ff]">&gt; GOVERNMENT</p>
             <p className="text-xs mt-1">Secure, cloud-first systems.</p>
           </div>
-          <div>
+          <div className="flow-card">
             <p className="text-[clamp(0.8rem,1vw,0.95rem)] font-semibold text-[#00d2ff]">&gt; HEALTHCARE</p>
             <p className="text-xs mt-1">HIPAA compliant pipelines.</p>
           </div>
@@ -117,15 +117,15 @@ export default function FlowArtDefaultDemo() {
         </p>
         <hr className="my-4 border-none border-t border-white/10" />
         <div className="flex flex-wrap gap-[3vw]">
-          <div className="min-w-[180px] flex-1">
+          <div className="min-w-[180px] flex-1 flow-card">
             <p className="mb-1 text-sm font-bold uppercase tracking-wider text-[#00d2ff]">100% Traceability</p>
             <p className="text-xs text-slate-400">Every functional block resolves to a backlog ticket.</p>
           </div>
-          <div className="min-w-[180px] flex-1">
+          <div className="min-w-[180px] flex-1 flow-card">
             <p className="mb-1 text-sm font-bold uppercase tracking-wider text-[#00d2ff]">Expert Gates</p>
             <p className="text-xs text-slate-400">Senior architects audit every AI-proposed pull request.</p>
           </div>
-          <div className="min-w-[180px] flex-1">
+          <div className="min-w-[180px] flex-1 flow-card">
             <p className="mb-1 text-sm font-bold uppercase tracking-wider text-[#00d2ff]">Modern Stack</p>
             <p className="text-xs text-slate-400">Engineered with React, Node, Python, and serverless architectures.</p>
           </div>
@@ -152,19 +152,19 @@ export default function FlowArtDefaultDemo() {
         </p>
         <hr className="my-4 border-none border-t border-white/10" />
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-xs text-slate-400">
-          <div>
+          <div className="flow-card">
             <p className="font-semibold text-[#00d2ff]">USA OFFICE</p>
             <p className="mt-1">Glen Allen, VA</p>
           </div>
-          <div>
+          <div className="flow-card">
             <p className="font-semibold text-[#00d2ff]">CANADA OFFICE</p>
             <p className="mt-1">Toronto, Ontario</p>
           </div>
-          <div>
+          <div className="flow-card">
             <p className="font-semibold text-[#00d2ff]">COLOMBIA OFFICE</p>
             <p className="mt-1">Medellín, Antioquia</p>
           </div>
-          <div>
+          <div className="flow-card">
             <p className="font-semibold text-[#00d2ff]">INDIA OFFICE</p>
             <p className="mt-1">Hyderabad, Telangana</p>
           </div>
