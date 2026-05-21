@@ -49,7 +49,7 @@ export default function SafeChiefPage({ onWaitlistClick }: SafeChiefPageProps) {
               SafeChief
             </h1>
 
-            <p className="hero-subtitle" data-aos="fade-up" data-aos-delay="100" style={{ fontSize: 'clamp(1.1rem, 1.8vw, 1.4rem)', color: 'var(--text-secondary)', maxWidth: '800px', margin: '0 0 2.5rem 0', lineHeight: 1.6 }}>
+            <p className="hero-subtitle" data-aos="fade-up" data-aos-delay="100" style={{ fontSize: 'clamp(1.1rem, 1.8vw, 1.4rem)', color: '#ffffff', maxWidth: '800px', margin: '0 0 2.5rem 0', lineHeight: 1.6 }}>
               One platform to manage the entire safe deposit box lifecycle. Centralize inventory, access tracking, renter onboarding, and regulatory compliance.
             </p>
 
