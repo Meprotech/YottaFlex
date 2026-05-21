@@ -126,64 +126,80 @@ export default function YottaBuilderPage({ onWaitlistClick }: YottaBuilderPagePr
 
       {/* 4. SIDE-BY-SIDE SIDEBAR SPOTLIGHT (COMPARISON) */}
       <section className="yotta-comparison-section">
-        <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
+        <div className="comparison-container">
           <div style={{ textAlign: 'center', marginBottom: '4rem' }} data-aos="fade-up">
             <span className="accent-label">THE IMPACT</span>
             <h2 className="section-title" style={{ fontSize: '2.5rem', fontWeight: 800, margin: '0.5rem 0 1rem 0' }} data-aos="fade-up" data-aos-delay="100">Why YottaBuilder.ai?</h2>
             <p style={{ color: 'var(--text-secondary)', maxWidth: '650px', margin: '0 auto' }} data-aos="fade-up" data-aos-delay="200">See how transitioning to the AI Development Lifecycle compares to traditional workflows.</p>
           </div>
 
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '2.5rem' }}>
+          <div className="comparison-grid">
             {/* Without YottaBuilder */}
             <div className="yotta-compare-card-without" data-aos="fade-right" data-aos-delay="300">
-              <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', marginBottom: '1.5rem' }}>
-                <div style={{ color: '#ef233c', background: 'rgba(239, 35, 60, 0.1)', padding: '0.5rem', borderRadius: '8px', display: 'flex' }}>
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="15" y1="9" x2="9" y2="15"></line><line x1="9" y1="9" x2="15" y2="15"></line></svg>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem', marginBottom: '1rem' }}>
+                <div style={{ color: '#ef233c', background: 'rgba(239, 35, 60, 0.1)', padding: '0.4rem', borderRadius: '6px', display: 'flex' }}>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="15" y1="9" x2="9" y2="15"></line><line x1="9" y1="9" x2="15" y2="15"></line></svg>
                 </div>
-                <h4 style={{ fontSize: '1.3rem', fontWeight: 700, color: 'var(--text-primary)' }}>WITHOUT YottaBuilder</h4>
+                <h4 style={{ fontSize: '1.05rem', fontWeight: 700, color: 'var(--text-primary)' }}>WITHOUT YottaBuilder</h4>
               </div>
-              <ul style={{ display: 'flex', flexDirection: 'column', gap: '1rem', color: 'var(--text-secondary)', fontSize: '0.95rem', paddingLeft: '0', listStyle: 'none' }}>
-                <li style={{ display: 'flex', gap: '0.75rem' }}>
+              <ul style={{ display: 'flex', flexDirection: 'column', gap: '0.65rem', color: 'var(--text-secondary)', fontSize: '0.85rem', paddingLeft: '0', listStyle: 'none' }}>
+                <li style={{ display: 'flex', gap: '0.6rem' }}>
                   <span style={{ color: '#ef233c', fontWeight: 'bold' }}>•</span>
                   Manual requirement logs prone to context gaps and translation errors.
                 </li>
-                <li style={{ display: 'flex', gap: '0.75rem' }}>
+                <li style={{ display: 'flex', gap: '0.6rem' }}>
                   <span style={{ color: '#ef233c', fontWeight: 'bold' }}>•</span>
                   Line-by-line coding requiring long feedback cycles and debugging intervals.
                 </li>
-                <li style={{ display: 'flex', gap: '0.75rem' }}>
+                <li style={{ display: 'flex', gap: '0.6rem' }}>
                   <span style={{ color: '#ef233c', fontWeight: 'bold' }}>•</span>
                   Manual test suites written after code development, risking missing key coverage.
                 </li>
-                <li style={{ display: 'flex', gap: '0.75rem' }}>
+                <li style={{ display: 'flex', gap: '0.6rem' }}>
                   <span style={{ color: '#ef233c', fontWeight: 'bold' }}>•</span>
                   Weeks or months of delivery time with significant integration overhead.
                 </li>
               </ul>
             </div>
 
-            {/* With YottaBuilder */}
-            <div className="yotta-compare-card-with" data-aos="fade-left" data-aos-delay="300">
-              <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', marginBottom: '1.5rem' }}>
-                <div style={{ color: 'var(--accent-cyan)', background: 'rgba(0, 210, 255, 0.1)', padding: '0.5rem', borderRadius: '8px', display: 'flex' }}>
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-                </div>
-                <h4 style={{ fontSize: '1.3rem', fontWeight: 700, color: 'var(--text-primary)' }}>WITH YottaBuilder.ai</h4>
+            {/* VS Rotating Badge */}
+            <div className="comparison-vs-wrapper" data-aos="zoom-in" data-aos-delay="400">
+              <div className="comparison-vs-circle">
+                <svg className="vs-rotate-ring" viewBox="0 0 100 100" width="80" height="80">
+                  <defs>
+                    <linearGradient id="vs-ring-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                      <stop offset="0%" style={{stopColor: 'var(--accent-cyan)'}} />
+                      <stop offset="100%" style={{stopColor: 'var(--accent-purple)'}} />
+                    </linearGradient>
+                  </defs>
+                  <circle cx="50" cy="50" r="45" fill="none" stroke="url(#vs-ring-grad)" strokeWidth="2" strokeDasharray="4 6" />
+                </svg>
+                <span className="vs-text">VS</span>
               </div>
-              <ul style={{ display: 'flex', flexDirection: 'column', gap: '1rem', color: 'var(--text-secondary)', fontSize: '0.95rem', paddingLeft: '0', listStyle: 'none' }}>
-                <li style={{ display: 'flex', gap: '0.75rem' }}>
+            </div>
+
+            {/* With YottaBuilder */}
+            <div className="yotta-compare-card-with" data-aos="fade-left" data-aos-delay="500">
+              <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem', marginBottom: '1rem' }}>
+                <div style={{ color: 'var(--accent-cyan)', background: 'rgba(0, 210, 255, 0.1)', padding: '0.4rem', borderRadius: '6px', display: 'flex' }}>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                </div>
+                <h4 style={{ fontSize: '1.05rem', fontWeight: 700, color: 'var(--text-primary)' }}>WITH YottaBuilder.ai</h4>
+              </div>
+              <ul style={{ display: 'flex', flexDirection: 'column', gap: '0.65rem', color: 'var(--text-secondary)', fontSize: '0.85rem', paddingLeft: '0', listStyle: 'none' }}>
+                <li style={{ display: 'flex', gap: '0.6rem' }}>
                   <span style={{ color: 'var(--accent-cyan)', fontWeight: 'bold' }}>•</span>
                   Secure unified ingestion parsing files and structuring requirements in seconds.
                 </li>
-                <li style={{ display: 'flex', gap: '0.75rem' }}>
+                <li style={{ display: 'flex', gap: '0.6rem' }}>
                   <span style={{ color: 'var(--accent-cyan)', fontWeight: 'bold' }}>•</span>
                   Full code generation in continuous loops validated against active specs.
                 </li>
-                <li style={{ display: 'flex', gap: '0.75rem' }}>
+                <li style={{ display: 'flex', gap: '0.6rem' }}>
                   <span style={{ color: 'var(--accent-cyan)', fontWeight: 'bold' }}>•</span>
                   Test-first suite generation forming a continuous validation layer.
                 </li>
-                <li style={{ display: 'flex', gap: '0.75rem' }}>
+                <li style={{ display: 'flex', gap: '0.6rem' }}>
                   <span style={{ color: 'var(--accent-cyan)', fontWeight: 'bold' }}>•</span>
                   Delivery in days with instant repository pushes and human-governed approvals.
                 </li>
