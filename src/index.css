@@ -4316,6 +4316,101 @@ html.light .pipeline-inner-ship-panel .commit-text {
   }
 }
 
+/* SafeChief Interactive Steps Tab Styles */
+.interactive-step-tab {
+  padding: 1.5rem;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  background: transparent;
+  cursor: pointer;
+  text-align: left;
+  transition: all 0.3s ease;
+}
+
+.interactive-step-tab:hover {
+  border-color: rgba(0, 210, 255, 0.4);
+  background: rgba(0, 210, 255, 0.02);
+}
+
+.interactive-step-tab.active {
+  border-color: var(--accent-cyan);
+  background: rgba(0, 210, 255, 0.05);
+}
+
+.interactive-step-tab .step-title {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  transition: all 0.3s ease;
+}
+
+.interactive-step-tab.active .step-title {
+  color: var(--accent-cyan);
+}
+
+.interactive-step-tab .step-desc {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+.interactive-step-tab .step-number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--text-primary);
+  font-size: 0.85rem;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.interactive-step-tab.active .step-number {
+  background: var(--accent-cyan);
+  color: #000;
+}
+
+/* Light Mode Overrides for SafeChief */
+html.light .interactive-step-tab {
+  border-color: rgba(28, 27, 25, 0.08);
+}
+
+html.light .interactive-step-tab:hover {
+  border-color: rgba(28, 27, 25, 0.25);
+  background: rgba(28, 27, 25, 0.02);
+}
+
+html.light .interactive-step-tab.active {
+  background: #F3ECE0;
+  border-color: #1c1b19;
+}
+
+html.light .interactive-step-tab .step-title {
+  color: #1c1b19;
+}
+
+html.light .interactive-step-tab.active .step-title {
+  color: #1c1b19;
+}
+
+html.light .interactive-step-tab .step-desc {
+  color: #5e5d5a;
+}
+
+html.light .interactive-step-tab .step-number {
+  background: rgba(28, 27, 25, 0.08);
+  color: #1c1b19;
+}
+
+html.light .interactive-step-tab.active .step-number {
+  background: #1c1b19;
+  color: #FAF6F0;
+}
+
 
 
 

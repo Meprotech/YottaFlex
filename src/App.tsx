@@ -7,6 +7,7 @@ import 'aos/dist/aos.css';
 import logoImg from './assets/logo.webp';
 import FlowArtDefaultDemo from './components/ui/demo.tsx';
 import YottaBuilderPage from './components/YottaBuilderPage.tsx';
+import SafeChiefPage from './components/SafeChiefPage.tsx';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -227,12 +228,20 @@ function App() {
     if (path.includes('yotta-builder-ai') || path.includes('yottabuilder')) {
       return 'yottabuilder';
     }
+    if (path.includes('safechief-2') || path.includes('safechief')) {
+      return 'safechief';
+    }
     return 'home';
   });
 
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'instant' });
-    const path = activePage === 'yottabuilder' ? '/yotta-builder-ai' : '/';
+    let path = '/';
+    if (activePage === 'yottabuilder') {
+      path = '/yotta-builder-ai';
+    } else if (activePage === 'safechief') {
+      path = '/safechief-2';
+    }
     if (window.location.pathname.toLowerCase() !== path) {
       window.history.pushState({ page: activePage }, '', path);
     }
@@ -249,6 +258,8 @@ function App() {
         const path = window.location.pathname.toLowerCase();
         if (path.includes('yotta-builder-ai') || path.includes('yottabuilder')) {
           setActivePage('yottabuilder');
+        } else if (path.includes('safechief-2') || path.includes('safechief')) {
+          setActivePage('safechief');
         } else {
           setActivePage('home');
         }
@@ -719,7 +730,7 @@ function App() {
             <div className="dropdown-menu">
               <a href="#" onClick={(e) => { e.preventDefault(); navigateToSection('products-section'); }}>Platforms Overview</a>
               <a href="#" onClick={(e) => { e.preventDefault(); setActivePage('yottabuilder'); }}>YottaBuilder</a>
-              <a href="#" onClick={(e) => { e.preventDefault(); navigateToSection('products-section'); }}>SafeChief</a>
+              <a href="#" onClick={(e) => { e.preventDefault(); setActivePage('safechief'); }}>SafeChief</a>
             </div>
           </li>
           
@@ -793,7 +804,7 @@ function App() {
         <div className="mobile-nav-group">
           <span className="mobile-nav-group-title">Products</span>
           <a href="#" className="mobile-submenu-link" onClick={(e) => { e.preventDefault(); setActivePage('yottabuilder'); setIsMenuOpen(false); }}>YottaBuilder.ai</a>
-          <a href="#" className="mobile-submenu-link" onClick={(e) => { e.preventDefault(); navigateToSection('products-section'); setIsMenuOpen(false); }}>SafeChief</a>
+          <a href="#" className="mobile-submenu-link" onClick={(e) => { e.preventDefault(); setActivePage('safechief'); setIsMenuOpen(false); }}>SafeChief</a>
         </div>
 
         <div className="mobile-nav-group">
@@ -1442,7 +1453,10 @@ function App() {
                 SafeChief is the ultimate Safe Deposit Box (SDB) vault management, tracking, and escheatment compliance engine. 
                 Keep a compliance-grade audit trail, streamline renter onboarding, and manage safe deposit box workflows under unified regulatory standards.
               </p>
-              <div style={{ marginTop: '1rem' }}>
+              <div style={{ marginTop: '1rem', display: 'flex', gap: '1rem' }}>
+                <a href="#" onClick={(e) => { e.preventDefault(); setActivePage('safechief'); }} className="btn btn-gradient">
+                  Visit Site
+                </a>
                 <a href="#waitlist" className="btn btn-outline">
                   Request SafeChief Demo
                 </a>
@@ -1839,8 +1853,10 @@ function App() {
       </section>
 
         </>
-      ) : (
+      ) : activePage === 'yottabuilder' ? (
         <YottaBuilderPage onWaitlistClick={() => navigateToSection('waitlist')} />
+      ) : (
+        <SafeChiefPage onWaitlistClick={() => navigateToSection('waitlist')} />
       )}      <div className="separator-gradient"></div>
 
       {/* SECTION 7 — FINAL CTA / WAITLIST */}
@@ -1923,7 +1939,7 @@ function App() {
             <div className="footer-col">
               <h4>Platform &amp; Products</h4>
               <a href="https://yottabuilder.ai/" target="_blank" rel="noopener noreferrer">YottaBuilder.ai</a>
-              <a href="#products-section">SafeChief</a>
+              <a href="#" onClick={(e) => { e.preventDefault(); setActivePage('safechief'); }}>SafeChief</a>
             </div>
             <div className="footer-col">
               <h4>Solutions</h4>
