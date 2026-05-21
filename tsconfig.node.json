@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "allowSyntheticDefaultImports": true,
+    "checkJs": true,
+    "skipLibCheck": true
+  },
+  "include": ["vite.config.js", "vite.config.ts"]
+}
