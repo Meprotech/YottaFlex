@@ -8,6 +8,7 @@ import logoImg from './assets/logo.webp';
 import FlowArtDefaultDemo from './components/ui/demo.tsx';
 import YottaBuilderPage from './components/YottaBuilderPage.tsx';
 import SafeChiefPage from './components/SafeChiefPage.tsx';
+import safeChiefHeroBg from './assets/SafeChief-Hero.png';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -705,12 +706,22 @@ function App() {
       <div ref={cursorRef} className="custom-cursor"></div>
 
       {/* Global Background (Dark Blue Style) */}
-      <div className="global-background">
-        <canvas ref={canvasRef} id="three-canvas"></canvas>
-        <div className="stars-1"></div>
-        <div className="stars-2"></div>
-        <div className="blue-radial-glow"></div>
-        <div className="bg-grid-overlay"></div>
+      <div 
+        className={`global-background ${activePage === 'safechief' ? 'safechief-bg' : ''}`}
+        style={activePage === 'safechief' ? {
+          background: `url(${safeChiefHeroBg}) no-repeat center center`,
+          backgroundSize: 'cover',
+          filter: 'blur(6px)',
+          transform: 'scale(1.03)',
+        } : {}}
+      >
+        <div style={{ display: activePage === 'safechief' ? 'none' : 'block' }}>
+          <canvas ref={canvasRef} id="three-canvas"></canvas>
+          <div className="stars-1"></div>
+          <div className="stars-2"></div>
+          <div className="blue-radial-glow"></div>
+          <div className="bg-grid-overlay"></div>
+        </div>
       </div>
       
       {/* Top Blur Header */}
@@ -1860,7 +1871,7 @@ function App() {
       )}      <div className="separator-gradient"></div>
 
       {/* SECTION 7 — FINAL CTA / WAITLIST */}
-      <section id="waitlist">
+      <section id="waitlist" className={activePage === 'safechief' ? 'safechief-waitlist' : ''}>
         <div className="waitlist-content">
           <span className="accent-label">EARLY ACCESS</span>
           <h2 className="waitlist-title">Build Faster. Ship Smarter. Start Today.</h2>

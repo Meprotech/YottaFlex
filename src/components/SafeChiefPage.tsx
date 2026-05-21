@@ -35,7 +35,7 @@ export default function SafeChiefPage({ onWaitlistClick }: SafeChiefPageProps) {
     <div className="safechief-product-page" style={{ color: 'var(--text-primary)' }}>
       
       {/* 1. HERO SECTION */}
-      <section className="product-hero" style={{ paddingTop: '9rem', paddingBottom: '4rem', minHeight: '80vh', position: 'relative' }}>
+      <section className="product-hero" style={{ paddingTop: '9rem', paddingBottom: '4rem', minHeight: '80vh', position: 'relative', background: 'transparent' }}>
         <div className="hero-split">
           
           {/* Left: Text Content */}
@@ -160,7 +160,7 @@ export default function SafeChiefPage({ onWaitlistClick }: SafeChiefPageProps) {
       </section>
 
       {/* 3. LIFECYCLE FLOW */}
-      <section className="safechief-lifecycle-section" style={{ padding: '6rem 2rem', background: 'rgba(255, 255, 255, 0.01)', borderTop: '1px solid rgba(255, 255, 255, 0.02)', borderBottom: '1px solid rgba(255, 255, 255, 0.02)' }}>
+      <section className="safechief-lifecycle-section" style={{ padding: '6rem 2rem', borderTop: '1px solid rgba(255, 255, 255, 0.02)', borderBottom: '1px solid rgba(255, 255, 255, 0.02)' }}>
         <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
           
           <div style={{ textAlign: 'center', marginBottom: '3rem', display: 'flex', flexDirection: 'column', alignItems: 'center' }} data-aos="fade-up">

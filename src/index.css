@@ -4411,6 +4411,24 @@ html.light .interactive-step-tab.active .step-number {
   color: #FAF6F0;
 }
 
+/* SafeChief Page Waitlist overrides - force text color to white */
+.safechief-waitlist .waitlist-title {
+  color: #ffffff !important;
+}
+
+.safechief-waitlist .waitlist-sub {
+  color: rgba(255, 255, 255, 0.75) !important;
+}
+
+.safechief-waitlist .waitlist-note {
+  color: rgba(255, 255, 255, 0.5) !important;
+}
+
+.safechief-waitlist .accent-label {
+  color: var(--accent-cyan) !important;
+  text-shadow: 0 0 10px rgba(0, 210, 255, 0.4) !important;
+}
+
 
 
 
