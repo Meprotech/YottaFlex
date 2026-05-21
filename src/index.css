@@ -4429,6 +4429,34 @@ html.light .interactive-step-tab.active .step-number {
   text-shadow: 0 0 10px rgba(0, 210, 255, 0.4) !important;
 }
 
+/* SafeChief Custom Step Display Panel */
+.safechief-detail-panel {
+  padding: 3rem 2.5rem;
+  border-radius: 16px;
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(0, 210, 255, 0.15);
+  background: rgba(8, 15, 26, 0.4);
+}
+
+html.light .safechief-detail-panel {
+  background: #F3ECE0;
+  border-color: rgba(28, 27, 25, 0.08);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+}
+
+.safechief-detail-panel .detail-divider {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+html.light .safechief-detail-panel .detail-divider {
+  border-top: 1px solid rgba(28, 27, 25, 0.08);
+}
+
 
 
 

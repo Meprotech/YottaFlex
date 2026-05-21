@@ -192,20 +192,9 @@ export default function SafeChiefPage({ onWaitlistClick }: SafeChiefPageProps) {
               ))}
             </div>
 
-            {/* Interactive Step Display Panel (Right) */}
+             {/* Interactive Step Display Panel (Right) */}
             <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }} data-aos="fade-left">
-              <div style={{
-                background: 'rgba(8, 15, 26, 0.4)',
-                border: '1px solid rgba(0, 210, 255, 0.15)',
-                borderRadius: '16px',
-                padding: '3rem 2.5rem',
-                boxShadow: '0 20px 40px rgba(0,0,0,0.3)',
-                textAlign: 'left',
-                minHeight: '300px',
-                display: 'flex',
-                flexDirection: 'column',
-                justifyContent: 'center'
-              }} className="pipeline-inner-panel">
+              <div className="pipeline-inner-panel safechief-detail-panel">
                 <span style={{ 
                   color: 'var(--accent-cyan)', 
                   fontFamily: 'monospace', 
@@ -217,7 +206,7 @@ export default function SafeChiefPage({ onWaitlistClick }: SafeChiefPageProps) {
                 }}>STAGE {activeStep + 1} OPERATIONS</span>
                 <h3 style={{ fontSize: '1.8rem', fontWeight: 800, margin: '0 0 1rem 0', color: 'var(--text-primary)' }}>{steps[activeStep].title}</h3>
                 <p style={{ fontSize: '1.05rem', color: 'var(--text-primary)', lineHeight: 1.6, marginBottom: '1.5rem' }}>{steps[activeStep].desc}</p>
-                <div style={{ borderTop: '1px solid rgba(255, 255, 255, 0.1)', paddingTop: '1.5rem' }}>
+                <div className="detail-divider" style={{ paddingTop: '1.5rem' }}>
                   <p style={{ fontSize: '0.92rem', color: 'var(--text-secondary)', lineHeight: 1.6, margin: 0 }}>{steps[activeStep].detail}</p>
                 </div>
               </div>
