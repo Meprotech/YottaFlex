@@ -186,7 +186,7 @@ export default function SafeChiefPage({ onWaitlistClick }: SafeChiefPageProps) {
               VAULT &amp; COMPLIANCE SYSTEM
             </div>
 
-            <h1 className="hero-title" data-aos="fade-up" style={{ fontSize: 'clamp(2.5rem, 5vw, 4.5rem)', fontWeight: 800, lineHeight: 1.1, letterSpacing: '-0.02em', marginBottom: '1.5rem', color: '#ffffff' }}>
+            <h1 className="hero-title" data-aos="fade-up" style={{ fontSize: 'clamp(2.5rem, 5vw, 4.5rem)', fontWeight: 800, lineHeight: 1.1, letterSpacing: '-0.02em', marginBottom: '1.5rem' }}>
               SafeChief
             </h1>
 

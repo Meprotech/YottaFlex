@@ -4781,6 +4781,14 @@ html.light .workflow-support-tag {
   color: #5E5D5A !important;
 }
 
+.safechief-product-page .hero-title {
+  color: #ffffff;
+}
+
+html.light .safechief-product-page .hero-title {
+  color: #faf6f0cc;
+}
+
 
 
 
