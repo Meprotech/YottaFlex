@@ -1678,7 +1678,20 @@ function App() {
           </div>
 
           <div className="spotlight-cta">
-            <a href="https://yottabuilder.ai/" target="_blank" rel="noopener noreferrer" className="btn btn-gradient">Learn More About YottaBuilder &rarr;</a>
+            <a href="https://yottabuilder.ai/" target="_blank" rel="noopener noreferrer" className="continue-application">
+              Learn More About YottaBuilder
+              <div>
+                <div className="folder">
+                  <div className="top">
+                    <svg viewBox="0 0 24 27">
+                      <path d="M1,0 L23,0 C23.5522847,-1.01453063e-16 24,0.44771525 24,1 L24,8.18233978 C24,8.77566747 23.473795,9.24838877 22.8832033,9.20459369 L22.4042857,9.16911765 C21.0556287,9.06921703 19.7042537,9.13627993 18.354,9.37 L17.4320435,9.52926715 C15.2984168,9.89775376 13.118946,10.0212007 10.945,9.89775376 L10.518,9.87320588 C9.46162601,9.81302514 8.40251258,9.85507387 7.35,10 L1,10 C0.44771525,10 6.76353751e-17,9.55228475 0,9 L0,1 C-6.76353751e-17,0.44771525 0.44771525,1.01453063e-16 1,0 Z"></path>
+                    </svg>
+                  </div>
+                  <div className="paper"></div>
+                </div>
+                <div className="pencil"></div>
+              </div>
+            </a>
           </div>
         </div>
       </section>

@@ -861,44 +861,33 @@ nav.scrolled {
 }
 
 .hero-card-btn {
-  background: #e8e8e8;
-  color: #212121;
-  font-weight: 700;
-  font-size: 0.9rem;
-  padding: 0.6rem 1.8rem;
-  border-radius: 12px;
-  text-decoration: none;
+  position: relative;
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
-  position: relative;
-  overflow: hidden;
-  z-index: 1;
-  transition: all 250ms;
-}
-
-.hero-card-btn::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 0;
+  padding: 0.6rem 1.8rem;
+  text-align: center;
+  font-weight: 700;
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+  text-decoration: none;
+  color: var(--accent-cyan);
+  background: transparent;
+  cursor: pointer;
+  transition: ease-out 0.5s;
+  border: 2px solid var(--accent-cyan);
   border-radius: 12px;
-  background-color: #212121;
-  z-index: -1;
-  box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
-  transition: all 250ms;
+  box-shadow: inset 0 0 0 0 var(--accent-cyan);
+  z-index: 1;
 }
 
 .hero-card-btn:hover {
-  color: #e8e8e8 !important;
-  box-shadow: 0 0 20px rgba(0, 245, 255, 0.4);
+  color: #0d0f14 !important;
+  box-shadow: inset 0 -100px 0 0 var(--accent-cyan);
 }
 
-.hero-card-btn:hover::before {
-  width: 100%;
+.hero-card-btn:active {
+  transform: scale(0.95);
 }
 
 /* Light Mode Overrides for Hero Cards */
@@ -923,14 +912,15 @@ html.light .hero-card-desc {
 }
 
 html.light .hero-card-btn {
-  background: #1C1B19;
-  color: #ffffff;
-  box-shadow: 0 4px 12px rgba(28, 27, 25, 0.15);
+  color: #1C1B19;
+  background: transparent;
+  border-color: #1C1B19;
+  box-shadow: inset 0 0 0 0 #1C1B19;
 }
 
 html.light .hero-card-btn:hover {
-  background: #0066cc;
-  box-shadow: 0 6px 18px rgba(0, 102, 204, 0.25);
+  color: #ffffff !important;
+  box-shadow: inset 0 -100px 0 0 #1C1B19;
 }
 
 /* Responsive */
@@ -4456,6 +4446,281 @@ html.light .safechief-detail-panel {
 html.light .safechief-detail-panel .detail-divider {
   border-top: 1px solid rgba(28, 27, 25, 0.08);
 }
+
+/* SafeChief Unified Section Styles */
+.safechief-interactive-workflow {
+  background: var(--bg-primary);
+  background-image: 
+    radial-gradient(circle at 50% 0%, rgba(0, 210, 255, 0.08) 0%, transparent 60%),
+    radial-gradient(circle at 10% 30%, rgba(0, 255, 136, 0.03) 0%, transparent 40%),
+    radial-gradient(circle at 90% 70%, rgba(29, 78, 216, 0.04) 0%, transparent 40%);
+}
+
+.step-circle {
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.step-circle:hover {
+  transform: translateY(-4px) scale(1.05);
+  border-color: var(--accent-cyan) !important;
+  box-shadow: 0 0 25px rgba(0, 210, 255, 0.4) !important;
+}
+
+@media (max-width: 900px) {
+  .pipeline-line-connector {
+    display: none !important;
+  }
+  .step-arrow {
+    display: none !important;
+  }
+}
+
+html.light .safechief-interactive-workflow {
+  background-image: 
+    radial-gradient(circle at 50% 0%, rgba(28, 27, 25, 0.04) 0%, transparent 60%);
+}
+
+html.light .step-circle {
+  border-color: rgba(28, 27, 25, 0.15) !important;
+  background: #FAF6F0 !important;
+  color: #1c1b19 !important;
+}
+
+html.light .step-circle:hover {
+  border-color: #1c1b19 !important;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05) !important;
+}
+
+html.light .step-arrow {
+  color: rgba(28, 27, 25, 0.2) !important;
+}
+
+html.light .pipeline-line-connector {
+  background: rgba(28, 27, 25, 0.1) !important;
+}
+
+/* YottaBuilder Spotlight Animation Button */
+.continue-application {
+  --color: #fff;
+  --background: #12151f;
+  --background-hover: #1c1e29;
+  --background-left: #222534;
+  --folder: var(--accent-cyan, #00d2ff);
+  --folder-inner: #0077b6;
+  --paper: #FFFFFF;
+  --paper-lines: #BBC1E1;
+  --paper-behind: rgba(0, 210, 255, 0.15);
+  --pencil-cap: #fff;
+  --pencil-top: var(--accent-cyan, #00d2ff);
+  --pencil-middle: #fff;
+  --pencil-bottom: var(--accent-cyan, #00d2ff);
+  --shadow: rgba(13, 15, 25, .2);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  outline: none;
+  cursor: pointer;
+  position: relative;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  line-height: 19px;
+  -webkit-appearance: none;
+  -webkit-tap-highlight-color: transparent;
+  padding: 17px 38px 17px 69px;
+  transition: background 0.3s, border-color 0.3s;
+  color: var(--color) !important;
+  background: var(--bg, var(--background));
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  box-shadow: 0 4px 20px var(--shadow);
+}
+
+.continue-application > div {
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 53px;
+  position: absolute;
+  overflow: hidden;
+  border-radius: 8px 0 0 8px;
+  background: var(--background-left);
+  border-right: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.continue-application > div .folder {
+  width: 23px;
+  height: 27px;
+  position: absolute;
+  left: 15px;
+  top: 13px;
+}
+
+.continue-application > div .folder .top {
+  left: 0;
+  top: 0;
+  z-index: 2;
+  position: absolute;
+  transform: translateX(var(--fx, 0));
+  transition: transform 0.4s ease var(--fd, 0.3s);
+}
+
+.continue-application > div .folder .top svg {
+  width: 24px;
+  height: 27px;
+  display: block;
+  fill: var(--folder);
+  transform-origin: 0 50%;
+  transition: transform 0.3s ease var(--fds, 0.45s);
+  transform: perspective(120px) rotateY(var(--fr, 0deg));
+}
+
+.continue-application > div .folder:before, .continue-application > div .folder:after,
+.continue-application > div .folder .paper {
+  content: "";
+  position: absolute;
+  left: var(--l, 0);
+  top: var(--t, 0);
+  width: var(--w, 100%);
+  height: var(--h, 100%);
+  border-radius: 1px;
+  background: var(--b, var(--folder-inner));
+}
+
+.continue-application > div .folder:before {
+  box-shadow: 0 1.5px 3px var(--shadow), 0 2.5px 5px var(--shadow), 0 3.5px 7px var(--shadow);
+  transform: translateX(var(--fx, 0));
+  transition: transform 0.4s ease var(--fd, 0.3s);
+}
+
+.continue-application > div .folder:after,
+.continue-application > div .folder .paper {
+  --l: 1px;
+  --t: 1px;
+  --w: 21px;
+  --h: 25px;
+  --b: var(--paper-behind);
+}
+
+.continue-application > div .folder:after {
+  transform: translate(var(--pbx, 0), var(--pby, 0));
+  transition: transform 0.4s ease var(--pbd, 0s);
+}
+
+.continue-application > div .folder .paper {
+  z-index: 1;
+  --b: var(--paper);
+}
+
+.continue-application > div .folder .paper:before, .continue-application > div .folder .paper:after {
+  content: "";
+  width: var(--wp, 14px);
+  height: 2px;
+  border-radius: 1px;
+  transform: scaleY(0.5);
+  left: 3px;
+  top: var(--tp, 3px);
+  position: absolute;
+  background: var(--paper-lines);
+  box-shadow: 0 12px 0 0 var(--paper-lines), 0 24px 0 0 var(--paper-lines);
+}
+
+.continue-application > div .folder .paper:after {
+  --tp: 6px;
+  --wp: 10px;
+}
+
+.continue-application > div .pencil {
+  height: 2px;
+  width: 3px;
+  border-radius: 1px 1px 0 0;
+  top: 8px;
+  left: 105%;
+  position: absolute;
+  z-index: 3;
+  transform-origin: 50% 19px;
+  background: var(--pencil-cap);
+  transform: translateX(var(--pex, 0)) rotate(35deg);
+  transition: transform 0.4s ease var(--pbd, 0s);
+}
+
+.continue-application > div .pencil:before, .continue-application > div .pencil:after {
+  content: "";
+  position: absolute;
+  display: block;
+  background: var(--b, linear-gradient(var(--pencil-top) 55%, var(--pencil-middle) 55.1%, var(--pencil-middle) 60%, var(--pencil-bottom) 60.1%));
+  width: var(--w, 5px);
+  height: var(--h, 20px);
+  border-radius: var(--br, 2px 2px 0 0);
+  top: var(--t, 2px);
+  left: var(--l, -1px);
+}
+
+.continue-application > div .pencil:before {
+  -webkit-clip-path: polygon(0 5%, 5px 5%, 5px 17px, 50% 20px, 0 17px);
+  clip-path: polygon(0 5%, 5px 5%, 5px 17px, 50% 20px, 0 17px);
+}
+
+.continue-application > div .pencil:after {
+  --b: none;
+  --w: 3px;
+  --h: 6px;
+  --br: 0 2px 1px 0;
+  --t: 3px;
+  --l: 3px;
+  border-top: 1px solid var(--pencil-top);
+  border-right: 1px solid var(--pencil-top);
+}
+
+.continue-application:before, .continue-application:after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 2px;
+  border-radius: 1px;
+  background: var(--color);
+  transform-origin: 9px 1px;
+  transform: translateX(var(--cx, 0)) scale(0.5) rotate(var(--r, -45deg));
+  top: 26px;
+  right: 16px;
+  transition: transform 0.3s;
+}
+
+.continue-application:after {
+  --r: 45deg;
+}
+
+.continue-application:hover {
+  --cx: 2px;
+  --bg: var(--background-hover);
+  --fx: -40px;
+  --fr: -60deg;
+  --fd: .15s;
+  --fds: 0s;
+  --pbx: 3px;
+  --pby: -3px;
+  --pbd: .15s;
+  --pex: -24px;
+  border-color: var(--accent-cyan);
+}
+
+html.light .continue-application {
+  --background: #f1f5f9;
+  --background-hover: #e2e8f0;
+  --background-left: #cbd5e1;
+  --color: #1e293b;
+  border-color: rgba(0, 0, 0, 0.08);
+}
+
+html.light .continue-application:before, html.light .continue-application:after {
+  background: #1e293b;
+}
+
+html.light .continue-application:hover {
+  border-color: #1e293b;
+}
+
+
 
 
 
