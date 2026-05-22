@@ -238,7 +238,7 @@ export default function SafeChiefPage({ onWaitlistClick }: SafeChiefPageProps) {
             </p>
 
             {/* Tabs / Toggle Pill */}
-            <div style={{
+            <div className="workflow-toggle-container" style={{
               display: 'inline-flex',
               background: 'rgba(13, 15, 20, 0.6)',
               border: '1px solid rgba(255, 255, 255, 0.08)',
@@ -254,6 +254,7 @@ export default function SafeChiefPage({ onWaitlistClick }: SafeChiefPageProps) {
                   setActiveMainTab('force-open');
                   setActiveStep(0);
                 }}
+                className={`workflow-toggle-btn ${activeMainTab === 'force-open' ? 'active' : ''}`}
                 style={{
                   display: 'flex',
                   alignItems: 'center',
@@ -291,6 +292,7 @@ export default function SafeChiefPage({ onWaitlistClick }: SafeChiefPageProps) {
                   setActiveMainTab('sdb-management');
                   setActiveStep(0);
                 }}
+                className={`workflow-toggle-btn ${activeMainTab === 'sdb-management' ? 'active' : ''}`}
                 style={{
                   display: 'flex',
                   alignItems: 'center',
@@ -375,7 +377,7 @@ export default function SafeChiefPage({ onWaitlistClick }: SafeChiefPageProps) {
                         justifyContent: 'center',
                         marginBottom: '1.25rem',
                         boxShadow: isActive ? '0 0 25px rgba(0, 210, 255, 0.35)' : 'none',
-                        color: isActive ? 'var(--accent-cyan)' : '#ffffff',
+                        color: isActive ? 'var(--accent-cyan)' : 'var(--text-primary)',
                         transition: 'all 0.3s ease'
                       }}
                     >
@@ -400,7 +402,7 @@ export default function SafeChiefPage({ onWaitlistClick }: SafeChiefPageProps) {
                     )}
 
                     {/* STEP 0X label */}
-                    <div style={{
+                    <div className="workflow-step-badge" style={{
                       border: '1px solid rgba(255, 255, 255, 0.1)',
                       background: 'rgba(255, 255, 255, 0.02)',
                       borderRadius: '50px',
@@ -420,7 +422,7 @@ export default function SafeChiefPage({ onWaitlistClick }: SafeChiefPageProps) {
                       fontSize: '1.25rem',
                       fontWeight: 700,
                       marginBottom: '0.5rem',
-                      color: '#ffffff'
+                      color: 'var(--text-primary)'
                     }}>{step.title}</h3>
 
                     {/* Description */}
@@ -446,7 +448,7 @@ export default function SafeChiefPage({ onWaitlistClick }: SafeChiefPageProps) {
               padding: '2.5rem',
               textAlign: 'left'
             }}>
-              <span style={{
+              <span className="detail-stage-prefix" style={{
                 color: 'var(--accent-cyan)',
                 fontFamily: 'monospace',
                 fontSize: '0.75rem',
@@ -457,14 +459,14 @@ export default function SafeChiefPage({ onWaitlistClick }: SafeChiefPageProps) {
               }}>
                 STAGE 0{activeStep + 1} OPERATIONS
               </span>
-              <h4 style={{ fontSize: '1.5rem', fontWeight: 800, margin: '0 0 0.75rem 0', color: '#ffffff' }}>
+              <h4 className="detail-title" style={{ fontSize: '1.5rem', fontWeight: 800, margin: '0 0 0.75rem 0', color: 'var(--text-primary)' }}>
                 {currentSteps[activeStep].title}
               </h4>
-              <p style={{ fontSize: '1.05rem', color: '#ffffff', lineHeight: 1.6, marginBottom: '1.25rem' }}>
+              <p className="detail-desc" style={{ fontSize: '1.05rem', color: 'var(--text-primary)', lineHeight: 1.6, marginBottom: '1.25rem' }}>
                 {currentSteps[activeStep].desc}
               </p>
               <div style={{ paddingTop: '1.25rem', borderTop: '1px solid rgba(255, 255, 255, 0.08)' }}>
-                <p style={{ fontSize: '0.92rem', color: 'var(--text-secondary)', lineHeight: 1.6, margin: 0 }}>
+                <p className="detail-meta-text" style={{ fontSize: '0.92rem', color: 'var(--text-secondary)', lineHeight: 1.6, margin: 0 }}>
                   {currentSteps[activeStep].detail}
                 </p>
               </div>
@@ -493,7 +495,7 @@ export default function SafeChiefPage({ onWaitlistClick }: SafeChiefPageProps) {
                 }}
                 className="pipeline-card"
               >
-                <div style={{
+                <div className="card-icon-wrapper" style={{
                   background: 'rgba(0, 210, 255, 0.05)',
                   border: '1px solid rgba(0, 210, 255, 0.1)',
                   borderRadius: '12px',
@@ -508,13 +510,13 @@ export default function SafeChiefPage({ onWaitlistClick }: SafeChiefPageProps) {
                   {card.icon}
                 </div>
                 <div>
-                  <h4 style={{
+                  <h4 className="card-title" style={{
                     margin: '0 0 0.5rem 0',
                     fontSize: '1.1rem',
                     fontWeight: 700,
-                    color: '#ffffff'
+                    color: 'var(--text-primary)'
                   }}>{card.title}</h4>
-                  <p style={{
+                  <p className="card-desc" style={{
                     margin: 0,
                     fontSize: '0.9rem',
                     color: 'var(--text-secondary)',
@@ -527,7 +529,7 @@ export default function SafeChiefPage({ onWaitlistClick }: SafeChiefPageProps) {
 
           {/* Bottom Branch Support Tag */}
           <div data-aos="fade-up" style={{ marginTop: '4rem', textAlign: 'center' }}>
-            <div style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', background: 'rgba(255, 255, 255, 0.02)', border: '1px solid rgba(255, 255, 255, 0.08)', padding: '0.5rem 1.5rem', borderRadius: '100px', fontSize: '0.9rem', color: 'var(--text-secondary)' }}>
+            <div className="workflow-support-tag" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', background: 'rgba(255, 255, 255, 0.02)', border: '1px solid rgba(255, 255, 255, 0.08)', padding: '0.5rem 1.5rem', borderRadius: '100px', fontSize: '0.9rem', color: 'var(--text-secondary)' }}>
               <span>Includes complete multi-branch controls and corporate-level audit dashboards.</span>
             </div>
           </div>
