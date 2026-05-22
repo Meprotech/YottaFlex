@@ -529,9 +529,6 @@ nav.scrolled {
 .hero-split-image {
   flex: 1 1 50%;
   overflow: hidden;
-  border-radius: 12px;
-  border: 1px solid var(--glass-border);
-  box-shadow: 0 20px 50px rgba(0,0,0,0.3);
 }
 
 .hero-split-content {
@@ -546,7 +543,7 @@ nav.scrolled {
   .hero-split-image {
     flex: none;
     width: 100%;
-    max-width: 600px;
+    max-width: 600px; 
   }
   .hero-split-content {
     flex: none;

@@ -711,8 +711,8 @@ function App() {
         style={activePage === 'safechief' ? {
           background: `url(${safeChiefHeroBg}) no-repeat center center`,
           backgroundSize: 'cover',
-          filter: 'blur(6px)',
-          transform: 'scale(1.03)',
+          filter: 'blur(2px)',
+          transform: 'scale(1.01)',
         } : {}}
       >
         <div style={{ display: activePage === 'safechief' ? 'none' : 'block' }}>

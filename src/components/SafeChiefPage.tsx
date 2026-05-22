@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import safeChiefImg from '../assets/safechief_dashboard.png';
+import safeChiefImg from '../assets/safechief_dashboard.webp';
 
 interface SafeChiefPageProps {
   onWaitlistClick: () => void;
@@ -181,12 +181,12 @@ export default function SafeChiefPage({ onWaitlistClick }: SafeChiefPageProps) {
           
           {/* Left: Text Content */}
           <div className="hero-split-content" style={{ zIndex: 2, textAlign: 'left' }}>
-            <div className="hero-badge" data-aos="fade-down" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', background: 'rgba(0, 210, 255, 0.1)', border: '1px solid rgba(0, 210, 255, 0.3)', padding: '0.4rem 1rem', borderRadius: '100px', fontSize: '0.85rem', color: 'var(--accent-cyan)', marginBottom: '1.5rem', fontWeight: 600 }}>
+            <div className="hero-badge" data-aos="fade-down" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', background: 'rgba(0, 210, 255, 0.1)', border: '1px solid rgba(0, 210, 255, 0.3)', padding: '0.4rem 1rem', borderRadius: '100px', fontSize: '0.85rem', color: '#ffffff', marginBottom: '1.5rem', fontWeight: 600 }}>
               <span style={{ width: '8px', height: '8px', background: 'var(--accent-cyan)', borderRadius: '50%', display: 'inline-block', boxShadow: '0 0 8px var(--accent-cyan)' }}></span>
               VAULT &amp; COMPLIANCE SYSTEM
             </div>
 
-            <h1 className="hero-title" data-aos="fade-up" style={{ fontSize: 'clamp(2.5rem, 5vw, 4.5rem)', fontWeight: 800, lineHeight: 1.1, letterSpacing: '-0.02em', marginBottom: '1.5rem', background: 'linear-gradient(135deg, var(--text-primary) 40%, var(--accent-cyan) 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
+            <h1 className="hero-title" data-aos="fade-up" style={{ fontSize: 'clamp(2.5rem, 5vw, 4.5rem)', fontWeight: 800, lineHeight: 1.1, letterSpacing: '-0.02em', marginBottom: '1.5rem', color: '#ffffff' }}>
               SafeChief
             </h1>
 
@@ -213,10 +213,7 @@ export default function SafeChiefPage({ onWaitlistClick }: SafeChiefPageProps) {
                 width: '100%', 
                 height: 'auto', 
                 display: 'block', 
-                objectFit: 'cover',
-                borderRadius: '16px',
-                border: '1px solid rgba(255, 255, 255, 0.08)',
-                boxShadow: '0 20px 40px rgba(0, 0, 0, 0.5)'
+                objectFit: 'cover'
               }} 
             />
           </div>
