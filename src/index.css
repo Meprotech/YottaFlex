@@ -2454,17 +2454,6 @@ nav.liquid-glass-nav {
   border-bottom: none;
 }
 
-nav.liquid-glass-nav::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  z-index: -1;
-  background: rgba(255, 255, 255, 0.04);
-  backdrop-filter: blur(8px);
-  filter: url(#glass-distortion);
-  transition: all 0.4s ease;
-}
-
 nav.liquid-glass-nav::after {
   content: '';
   position: absolute;
@@ -2476,10 +2465,6 @@ nav.liquid-glass-nav::after {
 nav.liquid-glass-nav.scrolled {
   padding: 0.9rem 4rem;
   background: rgba(4, 10, 24, 0.7);
-}
-
-nav.liquid-glass-nav.scrolled::before {
-  background: rgba(255, 255, 255, 0.07);
 }
 
 @keyframes moveBackground {

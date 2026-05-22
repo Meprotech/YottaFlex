@@ -229,7 +229,7 @@ function App() {
     if (path.includes('yotta-builder-ai') || path.includes('yottabuilder')) {
       return 'yottabuilder';
     }
-    if (path.includes('safechief-2') || path.includes('safechief')) {
+    if (path.includes('safechief')) {
       return 'safechief';
     }
     return 'home';
@@ -241,7 +241,7 @@ function App() {
     if (activePage === 'yottabuilder') {
       path = '/yotta-builder-ai';
     } else if (activePage === 'safechief') {
-      path = '/safechief-2';
+      path = '/safechief';
     }
     if (window.location.pathname.toLowerCase() !== path) {
       window.history.pushState({ page: activePage }, '', path);
@@ -259,7 +259,7 @@ function App() {
         const path = window.location.pathname.toLowerCase();
         if (path.includes('yotta-builder-ai') || path.includes('yottabuilder')) {
           setActivePage('yottabuilder');
-        } else if (path.includes('safechief-2') || path.includes('safechief')) {
+        } else if (path.includes('safechief')) {
           setActivePage('safechief');
         } else {
           setActivePage('home');
