@@ -1965,6 +1965,11 @@ function App() {
 
       {/* SECTION 8 — FOOTER */}
       <footer>
+        <div className="footer-starfield" aria-hidden="true">
+          <div className="footer-stars footer-stars-small"></div>
+          <div className="footer-stars footer-stars-medium"></div>
+          <div className="footer-stars footer-stars-large"></div>
+        </div>
         <div className="footer-top">
           <div className="footer-brand">
             <a href="#" className="logo-container" onClick={(e) => { e.preventDefault(); setActivePage('home'); window.scrollTo({ top: 0, behavior: 'smooth' }); }}>
