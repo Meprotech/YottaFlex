@@ -8,6 +8,8 @@ import logoImg from './assets/logo.webp';
 import FlowArtDefaultDemo from './components/ui/demo.tsx';
 import YottaBuilderPage from './components/YottaBuilderPage.tsx';
 import SafeChiefPage from './components/SafeChiefPage.tsx';
+import AboutUsPage from './components/AboutUsPage.tsx';
+import PartnershipPage from './components/PartnershipPage.tsx';
 import safeChiefHeroBg from './assets/SafeChief-Hero.png';
 
 gsap.registerPlugin(ScrollTrigger);
@@ -232,6 +234,12 @@ function App() {
     if (path.includes('safechief')) {
       return 'safechief';
     }
+    if (path.includes('about')) {
+      return 'about';
+    }
+    if (path.includes('partnership')) {
+      return 'partnership';
+    }
     return 'home';
   });
 
@@ -242,6 +250,10 @@ function App() {
       path = '/yotta-builder-ai';
     } else if (activePage === 'safechief') {
       path = '/safechief';
+    } else if (activePage === 'about') {
+      path = '/about-us';
+    } else if (activePage === 'partnership') {
+      path = '/partnership';
     }
     if (window.location.pathname.toLowerCase() !== path) {
       window.history.pushState({ page: activePage }, '', path);
@@ -261,6 +273,10 @@ function App() {
           setActivePage('yottabuilder');
         } else if (path.includes('safechief')) {
           setActivePage('safechief');
+        } else if (path.includes('about')) {
+          setActivePage('about');
+        } else if (path.includes('partnership')) {
+          setActivePage('partnership');
         } else {
           setActivePage('home');
         }
@@ -776,6 +792,8 @@ function App() {
           </li>
 
           <li className="nav-item"><a href="#" onClick={(e) => { e.preventDefault(); navigateToSection('governance-section'); }}>Governance</a></li>
+          <li className="nav-item"><a href="#" onClick={(e) => { e.preventDefault(); setActivePage('partnership'); }} className={activePage === 'partnership' ? 'active-page-link' : ''}>Partnership</a></li>
+          <li className="nav-item"><a href="#" onClick={(e) => { e.preventDefault(); setActivePage('about'); }} className={activePage === 'about' ? 'active-page-link' : ''}>About Us</a></li>
           <li className="nav-item"><a href="#" onClick={(e) => { e.preventDefault(); navigateToSection('waitlist'); }}>Contact</a></li>
         </ul>
 
@@ -829,6 +847,8 @@ function App() {
         </div>
 
         <a href="#" className="mobile-link" onClick={(e) => { e.preventDefault(); navigateToSection('governance-section'); setIsMenuOpen(false); }}>Governance</a>
+        <a href="#" className="mobile-link" onClick={(e) => { e.preventDefault(); setActivePage('partnership'); setIsMenuOpen(false); }}>Partnership</a>
+        <a href="#" className="mobile-link" onClick={(e) => { e.preventDefault(); setActivePage('about'); setIsMenuOpen(false); }}>About Us</a>
         <a href="#" className="mobile-link" onClick={(e) => { e.preventDefault(); navigateToSection('waitlist'); setIsMenuOpen(false); }}>Contact</a>
         <a href="#" className="btn btn-gradient mobile-link" style={{ marginTop: '1rem' }} onClick={(e) => { e.preventDefault(); navigateToSection('waitlist'); setIsMenuOpen(false); }}>Get Early Access</a>
         
@@ -1879,6 +1899,10 @@ function App() {
         </>
       ) : activePage === 'yottabuilder' ? (
         <YottaBuilderPage onWaitlistClick={() => navigateToSection('waitlist')} />
+      ) : activePage === 'about' ? (
+        <AboutUsPage onWaitlistClick={() => navigateToSection('waitlist')} />
+      ) : activePage === 'partnership' ? (
+        <PartnershipPage onWaitlistClick={() => navigateToSection('waitlist')} />
       ) : (
         <SafeChiefPage onWaitlistClick={() => navigateToSection('waitlist')} />
       )}      <div className="separator-gradient"></div>
@@ -1971,8 +1995,10 @@ function App() {
             </div>
             <div className="footer-col">
               <h4>Company</h4>
-              <a href="#governance-section">Governance</a>
-              <a href="#waitlist">Contact</a>
+              <a href="#governance-section" onClick={(e) => { e.preventDefault(); navigateToSection('governance-section'); }}>Governance</a>
+              <a href="#" onClick={(e) => { e.preventDefault(); setActivePage('partnership'); }}>Partnership</a>
+              <a href="#" onClick={(e) => { e.preventDefault(); setActivePage('about'); }}>About Us</a>
+              <a href="#waitlist" onClick={(e) => { e.preventDefault(); navigateToSection('waitlist'); }}>Contact</a>
             </div>
           </div>
         </div>
