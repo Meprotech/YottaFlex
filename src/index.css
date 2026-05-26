@@ -3369,45 +3369,73 @@ html.light .pipeline-step-card.step-3:hover .step-number {
   text-shadow: none;
 }
 
-/* Waitlist form overrides - keep waitlist section and terminal dark in light mode */
+/* Waitlist form overrides - premium light theme developer styling */
 html.light #waitlist {
-  background-color: #f7f7ef;
+  background: linear-gradient(to bottom, var(--bg-primary) 0%, var(--bg-secondary) 100%);
   background-image: none;
 }
 html.light #waitlist .accent-label {
   color: #059669;
-  text-shadow: 0 0 10px rgba(5, 150, 105, 0.4);
+  text-shadow: none;
 }
 html.light #waitlist .waitlist-title {
-  color: #059669;
+  color: #000000;
+  background: none;
+  -webkit-text-fill-color: initial;
 }
 html.light #waitlist .waitlist-sub {
-  color: #047857;
+  color: #000000;
+  opacity: 0.85;
 }
 html.light #waitlist .waitlist-note {
-  color: #047857;
+  color: #000000;
+  opacity: 0.75;
 }
 html.light .terminal-container {
-  border-color: rgba(5, 150, 105, 0.35);
-  box-shadow: 0 10px 40px rgba(5, 150, 105, 0.15);
+  background: #ffffff;
+  border-color: rgba(5, 150, 105, 0.25);
+  box-shadow: 0 15px 45px rgba(5, 150, 105, 0.08), 0 5px 15px rgba(0, 0, 0, 0.03);
+}
+html.light .terminal-header {
+  background: #fbfbfa;
+  border-bottom-color: rgba(5, 150, 105, 0.12);
 }
 html.light .terminal-title {
-  color: #94a3b8;
+  color: #5e5d5a;
 }
 html.light .terminal-body {
-  color: #ffffff;
+  color: #1c1b19;
 }
 html.light .terminal-prompt {
-  color: #00d2ff;
+  color: #059669;
+}
+html.light .terminal-command {
+  color: #1c1b19;
 }
 html.light .terminal-output {
-  color: #94a3b8;
+  color: #5e5d5a;
 }
 html.light .terminal-input {
+  color: #059669;
+  caret-color: #059669;
+}
+html.light .terminal-submit-btn {
+  background: #059669;
   color: #ffffff;
+  box-shadow: 0 4px 12px rgba(5, 150, 105, 0.15);
+}
+html.light .terminal-submit-btn::before {
+  background-color: #046a4e;
+}
+html.light .terminal-submit-btn:hover {
+  color: #ffffff !important;
+  box-shadow: 0 0 20px rgba(5, 150, 105, 0.4);
+}
+html.light .terminal-success-message {
+  border-top-color: rgba(5, 150, 105, 0.2);
 }
 html.light .terminal-success-text {
-  color: #00f5ff;
+  color: #059669;
 }
 
 /* Footer overrides - keep footer dark in light mode */
@@ -4570,6 +4598,69 @@ html.light .interactive-step-tab.active .step-number {
 .safechief-waitlist .accent-label {
   color: var(--accent-cyan) !important;
   text-shadow: 0 0 10px rgba(0, 210, 255, 0.4) !important;
+}
+
+/* Light mode overrides for SafeChief waitlist - premium slate/blue */
+html.light .safechief-waitlist .waitlist-title {
+  background: none !important;
+  -webkit-text-fill-color: initial !important;
+  color: #000000 !important;
+}
+
+html.light .safechief-waitlist .waitlist-sub {
+  color: #000000 !important;
+  opacity: 0.85;
+}
+
+html.light .safechief-waitlist .waitlist-note {
+  color: #000000 !important;
+  opacity: 0.75;
+}
+
+html.light .safechief-waitlist .accent-label {
+  color: #0066cc !important;
+  text-shadow: none !important;
+}
+
+html.light .safechief-waitlist .terminal-container {
+  border-color: rgba(0, 102, 204, 0.25) !important;
+  box-shadow: 0 15px 45px rgba(0, 102, 204, 0.08) !important;
+}
+
+html.light .safechief-waitlist .terminal-header {
+  border-bottom-color: rgba(0, 102, 204, 0.12) !important;
+}
+
+html.light .safechief-waitlist .terminal-prompt {
+  color: #0066cc !important;
+}
+
+html.light .safechief-waitlist .terminal-input {
+  color: #0066cc !important;
+  caret-color: #0066cc !important;
+}
+
+html.light .safechief-waitlist .terminal-success-message {
+  border-top-color: rgba(0, 102, 204, 0.2) !important;
+}
+
+html.light .safechief-waitlist .terminal-success-text {
+  color: #0066cc !important;
+}
+
+html.light .safechief-waitlist .terminal-submit-btn {
+  background: #0066cc !important;
+  color: #ffffff !important;
+  box-shadow: 0 4px 12px rgba(0, 102, 204, 0.15) !important;
+}
+
+html.light .safechief-waitlist .terminal-submit-btn::before {
+  background-color: #0052a3 !important;
+}
+
+html.light .safechief-waitlist .terminal-submit-btn:hover {
+  color: #ffffff !important;
+  box-shadow: 0 0 20px rgba(0, 102, 204, 0.4) !important;
 }
 
 /* SafeChief Custom Step Display Panel */
